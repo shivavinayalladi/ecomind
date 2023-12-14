@@ -4,7 +4,8 @@ import Register from './components/register/Register'
 import Home from './components/Home';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Mydashboard from './components/mydashboard/Mydashboard'
-import Quiz from './components/quiz/Quiz'
+import Quiz from './components/Quiz/Quiz'
+import Riddle1 from './components/Riddle/Riddle1'
 import Myscore from './components/myscore/Myscore'
 import Analytics from './components/analytics/Analytics'
 import Story from './components/story/Story'
@@ -24,6 +25,8 @@ function App() {
         <Route path="/analytics" element = {<Analytics/>} />
         <Route path="/story" element = {<Story/>} />
         <Route path="/quote" element = {<Quote/>} />
+        <Route path="/quote" element = {<Quote/>} />
+        <Route path="/riddle" element = {<Riddle1/>} />
 
       </Routes>
     </BrowserRouter>

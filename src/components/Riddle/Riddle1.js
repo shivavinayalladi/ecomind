@@ -2,7 +2,7 @@ import React from 'react'
 import Dashboard from '../dashboard/Dashboard'
 import Navbar from  '../navbar/Navbar'
 import Box from '@mui/material/Box';
-import App from '../App'
+import Riddle from './Riddle';
 
 function Quiz() {
   return (
@@ -12,7 +12,7 @@ function Quiz() {
     <Box sx={{ display: 'flex' }}>
     <Dashboard/>
     <Box component="main" sx={{ flexGrow: 1,p:4}}>
-        <App/>
+        <Riddle/>
     </Box>
     </Box>
 

@@ -21,6 +21,7 @@ const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
 })(({ theme }) => ({
   zIndex: theme.zIndex.drawer + 1,
+  backgroundColor: 'white',
  
 }));
 const Search = styled('div')(({ theme }) => ({
@@ -170,7 +171,7 @@ export default function NavBar() {
           <IconButton
             size="large"
             edge="start"
-            color="inherit"
+            color="primary"
             aria-label="open drawer"
             sx={{ mr: 2 }}
             onClick={()=>updateOpen(!dopen)}
@@ -192,7 +193,7 @@ export default function NavBar() {
             <IconButton
               size="large"
               aria-label="show 1 new notifications"
-              color="inherit"
+              color="primary"
             >
               <Badge badgeContent={1} color="error">
                 <NotificationsIcon />
@@ -205,7 +206,7 @@ export default function NavBar() {
               aria-controls={menuId}
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
-              color="inherit"
+              color="primary"
             >
               <AccountCircle />
             </IconButton>
@@ -217,7 +218,7 @@ export default function NavBar() {
               aria-controls={mobileMenuId}
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
-              color="inherit"
+              color="primary"
             >
               <MoreIcon />
             </IconButton>
