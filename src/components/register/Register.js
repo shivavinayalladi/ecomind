@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TextField, Button, Typography } from '@mui/material';
 import './register.css'; // Make sure to create and link your CSS file
 import { useNavigate} from 'react-router-dom';
-
+import axios from 'axios'
 function Register() {
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -34,7 +34,32 @@ function Register() {
 
   const handleRegister = () => {
     // Your registration logic goes here
-    console.log(`Email: ${email}, Phone Number: ${phoneNumber}, Username: ${username}, Password: ${password}`);
+console.log(`Email: ${email}, Phone Number: ${phoneNumber}, Username: ${username}, Password: ${password}`);
+const data={
+  "email":email,
+  "phoneNumber":phoneNumber,
+  "username":username,
+  "password":password,
+  "social":0,
+  "interaction":0,
+  "behaviour":0,  
+  "emotion":0,
+  "knowledge":0,
+  "civil":0,
+  "responsibility":0
+}
+
+axios.post("http://localhost:4000/AdminHome-api/register-user",data)
+.then((response)=>{
+  if(response.status===201)
+  {
+      navigate('/login')
+  }
+  if(response.status!=201)
+  {
+
+  }
+})
   };
 
   return (

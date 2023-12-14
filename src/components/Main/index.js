@@ -12,6 +12,7 @@ import {
 import './Main.css'
 import mindImg from '../../images/mind.svg';
 
+
 import {
   CATEGORIES,
   NUM_OF_QUESTIONS,
@@ -22,12 +23,14 @@ import {
 import { shuffle } from '../../utils';
 
 import Offline from '../Offline';
+import axios from 'axios';
 
 const Main = ({ startQuiz }) => {
   const [category, setCategory] = useState('0');
   const [numOfQuestions, setNumOfQuestions] = useState(5);
   const [difficulty, setDifficulty] = useState('easy');
   const [questionsType, setQuestionsType] = useState('0');
+  const [results,setresults]=useState([])
   const [countdownTime, setCountdownTime] = useState({
     hours: 0,
     minutes: 120,
@@ -51,102 +54,70 @@ const Main = ({ startQuiz }) => {
     allFieldsSelected = true;
   }
 
+  const getRandomNumber = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+  
+  const generateRandomNumbers = (quantity, min, max) => {
+    const randomNumbers = [];
+  
+    for (let i = 0; i < quantity; i++) {
+      const randomNumber = getRandomNumber(min, max);
+      randomNumbers.push(randomNumber);
+    }
+  
+    return randomNumbers;
+  };
   const fetchData = () => {
-    setProcessing(true);
-    let results=[    {
-      
-      "question": "According to Sherlock Holmes, &quot;If you eliminate the impossible, whatever remains, however improbable, must be the...&quot;",
-      "correct_answer": "Truth",
-      "incorrect_answers": [
-          "Answer",
-          "Cause",
-          "Source"
-      ],
-      "options": [
-          "Source",
-          "Answer",
-          "Truth",
-          "Cause"
-      ]
-  },
-  {
-    "type": "multiple",
-    "difficulty": "easy",
-    "category": "General Knowledge",
-    "question": "When one is &quot;envious&quot;, they are said to be what color?",
-    "correct_answer": "Green",
-    "incorrect_answers": [
-        "Red",
-        "Blue",
-        "Yellow"
-    ],
-    "options": [
-        "Red",
-        "Blue",
-        "Yellow",
-        "Green"
-    ]
-},
-{
-    "type": "multiple",
-    "difficulty": "easy",
-    "category": "General Knowledge",
-    "question": "Which one of the following rhythm games was made by Harmonix?",
-    "correct_answer": "Rock Band",
-    "incorrect_answers": [
-        "Meat Beat Mania",
-        "Guitar Hero Live",
-        "Dance Dance Revolution"
-    ],
-    "options": [
-        "Rock Band",
-        "Guitar Hero Live",
-        "Meat Beat Mania",
-        "Dance Dance Revolution"
-    ]
-},
-{
-    "type": "multiple",
-    "difficulty": "easy",
-    "category": "General Knowledge",
-    "question": "Which of the following is the IATA code for Manchester Airport?",
-    "correct_answer": "MAN",
-    "incorrect_answers": [
-        "EGLL",
-        "LHR",
-        "EGCC"
-    ],
-    "options": [
-        "MAN",
-        "LHR",
-        "EGCC",
-        "EGLL"
-    ]
-},
-{
-    "type": "multiple",
-    "difficulty": "easy",
-    "category": "General Knowledge",
-    "question": "Which American-owned brewery led the country in sales by volume in 2015?",
-    "correct_answer": "D. G. Yuengling and Son, Inc",
-    "incorrect_answers": [
-        "Anheuser Busch",
-        "Boston Beer Company",
-        "Miller Coors"
-    ],
-    "options": [
-        "Miller Coors",
-        "D. G. Yuengling and Son, Inc",
-        "Anheuser Busch",
-        "Boston Beer Company"
-       ]
-    }
+    const randomNumbers1 = generateRandomNumbers(5, 0, 39);
+    const randomNumbers2 = generateRandomNumbers(5, 0, 28);
+    const vari=[]
 
-];
-    results.forEach(element => {
+
+    setProcessing(true);
+    axios.get("http://localhost:4000/AdminHome-api/get-quiz")
+    .then((response)=>{
+      console.log(response);
+      setresults(response.data.payload)
+   
+      for(let i of randomNumbers1){
+        let obj={};
+        obj["question"]=response.data.payload1[i].question;
+        obj["options"]=response.data.payload1[i].options;
+         let originalLetter=response.data.payload1[i].answer;
+        
+         const convertedLetter = originalLetter.toLowerCase();
+         const letterCode = convertedLetter.charCodeAt(0) - 'a'.charCodeAt(0);
+         const ans =response.data.payload1[i].options[letterCode];
+         obj["correct_answer"] = ans;
+        let arr=response.data.payload1[i].options.filter((item=>(item!=ans)))
+        obj["incorrect_answers"]=arr;
+        obj["category"]=response.data.payload1[i].cateogery;
+        vari.push(obj)
+      }
+      for(let i of randomNumbers2){
+        let obj={};
+        obj["question"]=response.data.payload2[i].question;
+        obj["options"]=response.data.payload2[i].options;
+        let originalLetter=response.data.payload2[i].answer;
+        
+         const convertedLetter = originalLetter.toLowerCase();
+         const letterCode = convertedLetter.charCodeAt(0) - 'a'.charCodeAt(0);
+         const ans =response.data.payload2[i].options[letterCode];
+         obj["correct_answer"] = ans;
+        let arr=response.data.payload2[i].options.filter((item=>(item!=ans)))
+        obj["incorrect_answers"]=arr;
+        obj["category"]=response.data.payload2[i].cateogery;
+        vari.push(obj)
+      }
+      console.log(vari,"hjghg")
+    })
+    let results=vari;
+         results.forEach(element => {
               element.options = shuffle([
                 element.correct_answer,
                 ...element.incorrect_answers,
+                
               ]);
             });
             setProcessing(false);

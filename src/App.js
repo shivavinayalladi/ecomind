@@ -11,6 +11,8 @@ import Analytics from './components/analytics/Analytics'
 import Story from './components/story/Story'
 import Quote from './components/quote/Quote'
 
+import Hangman from './components/Hangman/Hangman';
+
 function App() {
   return (
    
@@ -27,6 +29,8 @@ function App() {
         <Route path="/quote" element = {<Quote/>} />
         <Route path="/quote" element = {<Quote/>} />
         <Route path="/riddle" element = {<Riddle1/>} />
+        <Route path="/Hangman" element = {<Hangman/>} />
+
 
       </Routes>
     </BrowserRouter>

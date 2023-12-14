@@ -239,6 +239,26 @@ function Dashboard() {
                 <ListItemText primary="Riddle" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>
+            <ListItem  disablePadding sx={{ display: 'block' }} onClick={()=>{navigate("/Hangman")}}>
+              <ListItemButton
+                sx={{
+                  minHeight: 70,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                  }}
+                >
+                    <LogoutIcon/>
+                </ListItemIcon>
+                <ListItemText primary="Hang man" sx={{ opacity: open ? 1 : 0 }} />
+              </ListItemButton>
+            </ListItem>
             <ListItem  disablePadding sx={{ display: 'block' }} onClick={()=>{navigate("/")}}>
               <ListItemButton
                 sx={{
@@ -259,6 +279,7 @@ function Dashboard() {
                 <ListItemText primary="Logout" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>
+            
         
         </List>
       </Drawer>

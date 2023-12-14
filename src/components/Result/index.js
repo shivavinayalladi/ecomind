@@ -10,6 +10,7 @@ const Result = ({
   correctAnswers,
   timeTaken,
   questionsAndAnswers,
+  category,
   replayQuiz,
   resetQuiz,
 }) => {
@@ -34,9 +35,10 @@ const Result = ({
         />
       </Menu>
       {activeTab === 'Stats' && (
-        <Stats
+        <Stats  
           totalQuestions={totalQuestions}
           correctAnswers={correctAnswers}
+          category={category}
           timeTaken={timeTaken}
           replayQuiz={replayQuiz}
           resetQuiz={resetQuiz}
@@ -53,6 +55,7 @@ Result.propTypes = {
   correctAnswers: PropTypes.number.isRequired,
   timeTaken: PropTypes.number.isRequired,
   questionsAndAnswers: PropTypes.array.isRequired,
+  category:PropTypes.string.isRequired,
   replayQuiz: PropTypes.func.isRequired,
   resetQuiz: PropTypes.func.isRequired,
 };
