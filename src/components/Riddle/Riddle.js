@@ -14,7 +14,7 @@ const Riddle = () => {
               'Content-Type': 'application/json',
             },
           });
-    
+          setShowAnswer(false)
           console.log(response.data);
           setdata(response.data)
           setAnswer(response.data[0].answer)
@@ -32,21 +32,23 @@ const Riddle = () => {
 
   const handleCheckAnswer = () => {
     setShowAnswer(true);
+    
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="App1">
+      <header className="App1-header">
         <h1>Riddle Time!</h1>
-        
-        <p>Can you solve this riddle?</p>
+        <button onClick={fetchData}>GET Riddle</button>
+        <h5><p>Can you solve this riddle?</p></h5>
         <p>{/* Replace with your static riddle */}</p>
         {data && 
-        <p>{data[0].title}</p>
+        <h6><p>{data[0].title}</p></h6>
         } 
         {data && 
-        <p>{data[0].question}</p>
+        <h6><p>{data[0].question}</p></h6>
         } 
+         
         <input
           type="text"
           value={userAnswer}
@@ -55,10 +57,10 @@ const Riddle = () => {
         />
 
         <button onClick={handleCheckAnswer}>Check Answer</button>
-        <button onClick={fetchData}>GET Riddle</button>
+       
 
         {showAnswer && (
-          <div className="answer">
+          <div className="answeri">
             <p>
               The correct answer is: <strong>{correctAnswer}</strong>
             </p>

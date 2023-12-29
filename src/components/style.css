@@ -33,9 +33,50 @@
     justify-content: space-between;
     margin: 0;
 }
-
+ul{
+    list-style: none;
+}
 .inner-nav li{
     margin-left: 30px;
+    text-decoration: none;
+}
+li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: rgb(7, 14, 214);
+  
+    transition: background-color 0.3s, color 0.3s;
+  }
+.navbar .image{
+    width:100px;
+    height:80px;
+}
+.button a{
+    text-decoration: none;
+}
+.button a:hover{
+ 
+    color: crimson;
+    font-weight: bold;
+}
+.button a{
+   
+    color: aliceblue;
+    font-weight: bold;
+}
+  li a:hover {
+    background-color: #fff;
+    color: #ff5858;
+    font-size: 19px;
+  }
+.inner-nav li a{
+   
+    text-decoration: none;
 }
 
 .logo{
@@ -49,15 +90,26 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
+.sec{
+    margin-left: 51px;
+    border-radius: 10px;
+}
+.footer-text a{
+    text-decoration: none;
+}
 .button a {
     padding: 6px;
     border-radius: 3px;
     color: white;
     white-space: nowrap;
-    background: #f857a6; /* fallback for older browsers*/
-    background: -webkit-linear-gradient(to right, #ff5858, #f857a6);
-    background: linear-gradient(to right, #ff5858, #f857a6);
+    background:#ff5858 /* fallback for older browsers*/
+    
+}
+.text{
+    font-weight: bold;
+}
+.button a:hover{
+    background: transparent;
 }
 
 .hamburger{

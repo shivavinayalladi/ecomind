@@ -9,7 +9,7 @@ const Footer = () => {
                 <h1>Knowledge Grow Your Influence</h1>
             </div>
             <div className='footer-text'>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis quaerat in error, pariatur optio dolorum corporis dolore maiores suscipit. Quam.</p>
+                <p>Knowledge is a dynamic and ever-expanding entity. The world is constantly evolving, and embracing a mindset of continuous learning is essential. Whether through formal education, self-study, or experiential learning, the pursuit of knowledge is a lifelong journey.</p>
                 <a href="/">Get Started</a>
             </div>
         </div>
@@ -20,7 +20,7 @@ const Footer = () => {
                 <span className='curve'><img src="curve.png" alt="" /></span>
             </div>
             <div className='news-right'>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia explicabo exercitationem quis consequuntur voluptas nihil.</p>
+                <p>Contact Us and be a part of environment protection with Sustainability.Come let us fight for our future genertions</p>
                 <form action="">
                     <input type="email" name='email' />
                     <button>Subscribe</button>
@@ -28,7 +28,7 @@ const Footer = () => {
             </div>
         </div>
         <div className='footer-menu'>
-            <h1>TXN</h1>
+            <h1>Echo Mind</h1>
             <ul className='footer-inner-nav'>
                 <li><a href="#hub">Hub</a></li>
                 <li><a href="#mint">Mint</a></li>

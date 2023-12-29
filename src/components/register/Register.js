@@ -63,6 +63,7 @@ axios.post("http://localhost:4000/AdminHome-api/register-user",data)
   };
 
   return (
+    <div className='log'>
     <div className="register-body">
       <div className="register-container">
       <Typography variant="h4" gutterBottom>
@@ -122,6 +123,10 @@ axios.post("http://localhost:4000/AdminHome-api/register-user",data)
         }} fullWidth>
           Register
         </Button>
+      </div>
+    </div>
+    <div className='picture'>
+        <img src="https://static8.depositphotos.com/1378583/981/v/600/depositphotos_9819791-stock-illustration-hand-tree.jpg"/>
       </div>
     </div>
   );

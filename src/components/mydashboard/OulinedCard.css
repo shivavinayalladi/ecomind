@@ -1,0 +1,11 @@
+.quiz{
+    display: flex;
+}
+.q1{
+    width:40px;
+    margin-top: 10px;
+   
+}
+.small{
+margin-left: 80px;
+}

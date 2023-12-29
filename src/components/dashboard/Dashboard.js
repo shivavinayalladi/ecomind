@@ -3,11 +3,16 @@ import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
+import PieChartIcon from '@mui/icons-material/PieChart';
+import ScoreboardIcon from '@mui/icons-material/Scoreboard';
+import ManIcon from '@mui/icons-material/Man';
 import CssBaseline from '@mui/material/CssBaseline';
+import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import Divider from '@mui/material/Divider';
 import LowPriorityIcon from '@mui/icons-material/LowPriority';
 import IconButton from '@mui/material/IconButton';
 import CelebrationIcon from '@mui/icons-material/Celebration';
+import QuizIcon from '@mui/icons-material/Quiz';
 import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import ChaletIcon from '@mui/icons-material/Chalet';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -134,31 +139,12 @@ function Dashboard() {
                     justifyContent: 'center',
                   }}
                 >
-                  <GroupAddIcon/>
+                  <QuizIcon/>
                 </ListItemIcon>
                 <ListItemText primary="Quiz" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>
-            <ListItem  disablePadding sx={{ display: 'block' }} onClick={()=>{navigate("/myscore")}}>
-              <ListItemButton
-                sx={{
-                  minHeight: 70,
-                  justifyContent: open ? 'initial' : 'center',
-                  px: 2.5,
-                }}
-              >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : 'auto',
-                    justifyContent: 'center',
-                  }}
-                >
-                  <CelebrationIcon/>
-                </ListItemIcon>
-                <ListItemText primary="My score" sx={{ opacity: open ? 1 : 0 }} />
-              </ListItemButton>
-            </ListItem>
+           
             <ListItem  disablePadding sx={{ display: 'block' }} onClick={()=>{navigate("/analytics")}}>
               <ListItemButton
                 sx={{
@@ -174,31 +160,12 @@ function Dashboard() {
                     justifyContent: 'center',
                   }}
                 >
-                  <EventAvailableIcon/>
+                  <PieChartIcon/>
                 </ListItemIcon>
                 <ListItemText primary="Analytics" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>
-            <ListItem  disablePadding sx={{ display: 'block' }} onClick={()=>{navigate("/story")}}>
-              <ListItemButton
-                sx={{
-                  minHeight: 70,
-                  justifyContent: open ? 'initial' : 'center',
-                  px: 2.5,
-                }}
-              >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : 'auto',
-                    justifyContent: 'center',
-                  }}
-                >
-                  <ChaletIcon/>
-                </ListItemIcon>
-                <ListItemText primary="Story" sx={{ opacity: open ? 1 : 0 }} />
-                </ListItemButton>
-            </ListItem>
+           
             <ListItem  disablePadding sx={{ display: 'block' }} onClick={()=>{navigate("/quote")}}>
               <ListItemButton
                 sx={{
@@ -214,7 +181,7 @@ function Dashboard() {
                     justifyContent: 'center',
                   }}
                 >
-                  <LowPriorityIcon/>
+                  <FormatQuoteIcon/>
                 </ListItemIcon>
                 <ListItemText primary="Quote" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
@@ -254,7 +221,7 @@ function Dashboard() {
                     justifyContent: 'center',
                   }}
                 >
-                    <LogoutIcon/>
+                    <ManIcon/>
                 </ListItemIcon>
                 <ListItemText primary="Hang man" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>

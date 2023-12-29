@@ -69,7 +69,7 @@ const Main = ({ startQuiz }) => {
     return randomNumbers;
   };
   const fetchData = () => {
-    const randomNumbers1 = generateRandomNumbers(5, 0, 39);
+    const randomNumbers1 = generateRandomNumbers(5, 0, 38);
     const randomNumbers2 = generateRandomNumbers(5, 0, 28);
     const vari=[]
 
@@ -112,6 +112,7 @@ const Main = ({ startQuiz }) => {
       }
       console.log(vari,"hjghg")
     })
+
     let results=vari;
          results.forEach(element => {
               element.options = shuffle([

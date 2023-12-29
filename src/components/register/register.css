@@ -1,18 +1,20 @@
 
 .register-body {
-	background-image: url(./img.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin: 0;
+
+	margin-left: 150px;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	background-color: #b2d8d8; 
+	
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
   }
   
-
+.log{
+  background-image: url("https://img.freepik.com/free-vector/green-floral-background_53876-67015.jpg?size=626&ext=jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
   .register-container {
     width: 500px;
     padding: 20px;

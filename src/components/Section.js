@@ -1,5 +1,5 @@
 import React from 'react'
-
+import CulturalAwarenessCalendar from '../images/CulturalAwarenessCalendar.png'
 const Section = () => {
   return (
     <div className='section'>
@@ -11,7 +11,7 @@ const Section = () => {
                 <div className='button'><a href="/">Explore Now</a></div>
             </div>
             <div className='section-image'>
-                <img src="globe.png" alt="" />
+                <img src={CulturalAwarenessCalendar} alt="" className='sec'/>
             </div>
         </div>
         <div className='card-section'>

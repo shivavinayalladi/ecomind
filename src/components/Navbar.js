@@ -20,7 +20,10 @@ const Navbar = () => {
     <div className='navbar'>
         <div onClick={handleClick} className={`${showNav ? "hamburger1":"hamburger"}`}></div>
         <div className='logo'>
-            <h1>TXN</h1>
+            <h1>Echo Mind</h1>
+            <div className='image'>
+            <img src="https://cdn-icons-png.flaticon.com/512/3626/3626838.png"/>
+            </div>
             <nav className='menu'>
                 <ul className='inner-nav'>
                     <li><a href="#hub">Hub</a></li>
@@ -31,7 +34,7 @@ const Navbar = () => {
             </nav>
         </div>
         <div className='button'>
-            <a href="/login">Login/Register</a>
+            <a href="/login">Login / Register</a>
         </div>
     </div>
   )

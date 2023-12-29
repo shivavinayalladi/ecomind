@@ -38,11 +38,13 @@ const Quiz = ({ data, countdownTime, endQuiz }) => {
     }
 
     const qna = questionsAndAnswers;
+    console.log(data[questionIndex])
     qna.push({
       question: he.decode(data[questionIndex].question),
       user_answer: userSlectedAns,
       correct_answer: he.decode(data[questionIndex].correct_answer),
       point,
+      category:(data[questionIndex].category)
     });
 
     if (questionIndex === data.length - 1) {
@@ -58,6 +60,7 @@ const Quiz = ({ data, countdownTime, endQuiz }) => {
     setQuestionIndex(questionIndex + 1);
     setUserSlectedAns(null);
     setQuestionsAndAnswers(qna);
+    
   };
 
   const timeOver = timeTaken => {

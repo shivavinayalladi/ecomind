@@ -16,6 +16,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import {useAppStore} from '../dashboard/Appstore';
+import './Navbar.css'
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
@@ -182,10 +183,17 @@ export default function NavBar() {
             variant="h6"
             noWrap
             component="div"
+            color="primary"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            Look It
+            Echo Minds
+            
           </Typography>
+          <div className='image1'>
+            <div className='image'>
+            <img src="https://cdn-icons-png.flaticon.com/512/3626/3626838.png"/>
+            </div>
+            </div>
          
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>

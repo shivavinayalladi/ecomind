@@ -9,26 +9,23 @@ const FAQ = () => {
             <div className='service-right'>
                 <div className='qa'>
                     <input type="checkbox" id='collapsible-head-1' />
-                    <label for = "collapsible-head-1">What is the price?</label>
+                    <label for = "collapsible-head-1">What is the Objective?</label>
                     <div className='collapsible-text-1'>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit odit similique doloremque
-                            ab unde. Placeat recusandae nobis voluptate atque, fugit itaque nam quos.</p>
+                        <p>Bring Fusion of Entertainment and Social awareness leading to sustainable development</p>
                     </div>
                 </div>
                 <div className='qa'>
                 <input type="checkbox" id="collapsible-head-2" />
-                <label for="collapsible-head-2">How many keys are there?</label>
+                <label for="collapsible-head-2">How many domains are there?</label>
                 <div class="collapsible-text-2">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit odit similique doloremque
-                        ab unde. Placeat recusandae nobis voluptate atque, fugit itaque nam quos.</p>
+                    <p>Social Awareness,Entertainment,Sustainable development</p>
                 </div>
                 </div>
                 <div className='qa'>
                     <input type="checkbox" id="collapsible-head-3" />
-                    <label for="collapsible-head-3">Are keys unbindable?</label>
+                    <label for="collapsible-head-3">Are NGO'S Involved?</label>
                     <div class="collapsible-text-3">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit odit similique doloremque
-                            ab unde. Placeat recusandae nobis voluptate atque, fugit itaque nam quos.</p>
+                        <p>Yes</p>
                     </div>
                 </div>
                 <div className='qa'>

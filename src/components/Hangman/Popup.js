@@ -39,9 +39,9 @@ const Popup = ({status, word, reset}) => {
         return null
 
     return <div className="popup">
-        <p>You {status}!</p>
-        <p>The word was {word}</p>
-        <p>TOdays Quote is: {quote}</p>
+        <h2><p>You <span>{status}!</span></p></h2>
+        <h4><p>The word was {word}</p></h4>
+        <p>Todays Quote is: <h6>{quote}</h6></p>
         <button className="pulse" onClick={reset}>
             Play again
         </button>

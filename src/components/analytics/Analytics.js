@@ -2,6 +2,7 @@ import React from 'react'
 import Dashboard from '../dashboard/Dashboard'
 import Navbar from  '../navbar/Navbar'
 import Box from '@mui/material/Box';
+import { Analytics1 } from './Analytics1';
 
 function Analytics() {
   return (
@@ -12,7 +13,7 @@ function Analytics() {
     <Dashboard/>
     <Box component="main" sx={{ flexGrow: 1,p:4}}>
         <div>
-            <h1>Analytics !!</h1>
+            <Analytics1/>
         </div>
     </Box>
     </Box>

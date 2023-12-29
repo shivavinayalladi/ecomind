@@ -1,26 +1,20 @@
 import React from 'react'
-
+import treew from '../images/treew.jpeg'
 const Container = () => {
   return (
     <div>
         <div className='container'>
             <div className='text'>
-                <h3>WEB3 Experience</h3>
-                <h1>TXN AUTOMATION</h1>
-                <p>TXN is a web3 automated market aggregator and multi-chain batch miner. TXN was created with the goal of creating a seamless and frictionless experience...</p>
-                <div className='button'><a href="/">Explore Now &#8599;</a></div>
+                <h3>Echo Minds</h3>
+                <h1>Fusion into the Future</h1>
+                <p>Social Awareness with Entertainment leading to Sustainable development</p>
+                <div className='button'><a href="/">Explore Now <span>&#8599;</span></a></div>
             </div>
             <div className='image'>
-                <img src="crypto1.png" alt="" />
+                <img src={treew} alt="" />
             </div>
         </div>
-        <div className='partners'>
-            <span><img src="webflow.png" alt="" /></span>
-            <span><img src="mparticle.png" alt="" /></span>
-            <span><img src="chargebee.png" alt="" /></span>
-            <span><img src="corsair.svg" alt="" /></span>
-            <span><img src="emachines.png" alt="" /></span>
-        </div>
+     
     </div>
   )
 }

@@ -42,18 +42,18 @@ export default function Hangman1() {
 
     useEffect(() => {
         if (corrects.length && word.split("").every(letter => corrects.includes(letter)))
-            setStatus('win');
+            setStatus('Won');
     },[corrects])
 
     useEffect(() => {
         if (fails.length === 10)
-            setStatus('lose');
+            setStatus('lost');
     },[fails])
 
 
 
     return (
-        <div>
+        <div className='up'>
             <p className='mask'>{maskWord}</p>
             <div >
                 {alphabets
